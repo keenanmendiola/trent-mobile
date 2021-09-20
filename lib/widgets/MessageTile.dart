@@ -1,29 +1,23 @@
+import 'package:basecode/widgets/Avatar.dart';
 import 'package:flutter/material.dart';
 
 class MessageTile extends StatelessWidget {
+  final int id;
   final String name;
   final String message;
   final String imageUrl;
-
-  MessageTile(this.name, this.message, this.imageUrl);
+  final Function onTap;
+  MessageTile(this.id, this.name, this.message, this.imageUrl, this.onTap);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print("Navigate to next page");
+        this.onTap(id, name);
       },
       child: Card(
         child: ListTile(
-          leading: Container(
-            width: 50,
-            height: 50,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(
-                  image: NetworkImage(this.imageUrl), fit: BoxFit.fill),
-            ),
-          ),
+          leading: Avatar(50.0, this.imageUrl),
           title: Text(
             this.name,
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),

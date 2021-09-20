@@ -17,5 +17,6 @@ void main() {
     ),
     getPages: routes,
     initialRoute: LoginScreen.routeName,
+    debugShowCheckedModeBanner: false,
   ));
 }
