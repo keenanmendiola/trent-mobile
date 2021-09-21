@@ -1,6 +1,5 @@
 import 'package:basecode/screens/DashboardScreen.dart';
 import 'package:basecode/screens/ForgotPasswordScreen.dart';
-import 'package:basecode/screens/MessagesScreen.dart';
 import 'package:basecode/screens/RegistrationScreen.dart';
 import 'package:basecode/widgets/SecondaryButton.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +64,7 @@ class LoginScreenState extends State<LoginScreen> {
                       iconData: FontAwesomeIcons.doorOpen,
                       onPress: () {
                         //authenticate here
-                        Get.offNamed(MessagesScreen.routeName);
+                        Get.offNamed(DashboardScreen.routeName);
                       }),
                   SizedBox(
                     height: 20.0,

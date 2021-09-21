@@ -1,6 +1,6 @@
-import 'package:basecode/screens/SettingsScreen.dart';
+import 'package:basecode/widgets/DashboardCard.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class DashboardScreen extends StatefulWidget {
   static String routeName = "/dashboard";
@@ -13,23 +13,39 @@ class DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 20.0),
-            child: GestureDetector(
-              onTap: () {
-                Get.toNamed(SettingsScreen.routeName);
-              },
-              child: Icon(Icons.settings, size: 26.0),
-            ),
+        body: SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              DashboardCard(FontAwesomeIcons.book, "Current Bookings", () {}),
+              DashboardCard(
+                  FontAwesomeIcons.calendarDay, "Scheduled Bookings", () {})
+            ],
           ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              DashboardCard(
+                  FontAwesomeIcons.scroll, "Transaction History", () {}),
+              DashboardCard(FontAwesomeIcons.truck, "Your Trucks", () {})
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              DashboardCard(FontAwesomeIcons.male, "Your Drivers", () {}),
+              DashboardCard(FontAwesomeIcons.calendarCheck, "Reports", () {})
+            ],
+          )
         ],
       ),
-      body: Center(
-        child: Text("Dashboard"),
-      ),
-    );
+    ));
   }
 }
