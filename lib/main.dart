@@ -1,6 +1,6 @@
+import 'package:basecode/screens/DriversListScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import './screens/LoginScreen.dart';
 import './routes.dart';
 
 void main() {
@@ -16,7 +16,7 @@ void main() {
       ),
     ),
     getPages: routes,
-    initialRoute: LoginScreen.routeName,
+    initialRoute: DriversList.routeName,
     debugShowCheckedModeBanner: false,
   ));
 }

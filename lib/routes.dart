@@ -1,5 +1,6 @@
 import 'package:basecode/screens/ConversationScreen.dart';
 import 'package:basecode/screens/DashboardScreen.dart';
+import 'package:basecode/screens/DriversListScreen.dart';
 import 'package:basecode/screens/ForgotPasswordScreen.dart';
 import 'package:basecode/screens/LoginScreen.dart';
 import 'package:basecode/screens/MessagesScreen.dart';
@@ -16,4 +17,5 @@ final List<GetPage<dynamic>> routes = [
       name: ForgotPasswordScreen.routeName, page: () => ForgotPasswordScreen()),
   GetPage(name: MessagesScreen.routeName, page: () => MessagesScreen()),
   GetPage(name: ConversationScreen.routeName, page: () => ConversationScreen()),
+  GetPage(name: DriversList.routeName, page: () => DriversList()),
 ];
