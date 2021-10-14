@@ -20,19 +20,21 @@ class PasswordField extends StatelessWidget {
     return TextFormField(
       obscureText: obscureText,
       decoration: InputDecoration(
-        prefixIcon: Container(
-          padding: EdgeInsets.symmetric(horizontal: 15.0),
-          child: Icon(
-            FontAwesomeIcons.lock,
-          ),
-        ),
         suffixIcon: GestureDetector(
-          child: Icon(obscureText ? Icons.visibility : Icons.visibility_off),
+          child: Padding(
+            padding: EdgeInsets.only(top: 12.0, right: 15.0, bottom: 10.0),
+            child: Text(
+              obscureText ? "Show" : "Hide",
+              style: TextStyle(
+                color: Theme.of(context).accentColor,
+              ),
+            ),
+          ),
           onTap: onTap,
         ),
         labelText: labelText,
         hintText: hintText,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0)),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
       ),
     );
   }

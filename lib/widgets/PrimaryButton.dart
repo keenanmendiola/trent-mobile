@@ -4,8 +4,14 @@ class PrimaryButton extends StatelessWidget {
   final String text;
   final IconData iconData;
   final Function onPress;
-  PrimaryButton(
-      {@required this.text, @required this.iconData, @required this.onPress});
+  final double height;
+
+  PrimaryButton({
+    @required this.text,
+    @required this.iconData,
+    @required this.onPress,
+    @required this.height,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +26,18 @@ class PrimaryButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(iconData),
+            this.iconData != null ? Icon(iconData) : SizedBox.shrink(),
             SizedBox(
               width: 10.0,
             ),
             Text(
               text,
-              style: TextStyle(fontSize: 17.0),
+              style: TextStyle(fontSize: 17.0, color: Colors.white),
             ),
           ],
         ),
         elevation: 8.0,
-        color: Theme.of(context).primaryColor,
+        color: Theme.of(context).buttonColor,
       ),
     );
   }

@@ -2,19 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:basecode/widgets/Avatar.dart';
 
 class DriverTile extends StatelessWidget {
+  final int id;
   final Function onTap;
   final String name;
   final String address;
   final String assignedTruck;
   final String plateNumber;
   final String imageUrl;
-  DriverTile(this.onTap, this.name, this.address, this.assignedTruck,
+  DriverTile(this.id, this.onTap, this.name, this.address, this.assignedTruck,
       this.plateNumber, this.imageUrl);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        this.onTap(id, name);
+      },
       child: Container(
         height: 100.0,
         margin: EdgeInsets.all(10.0),

@@ -1,3 +1,4 @@
+import 'package:basecode/screens/DriverProfile.dart';
 import 'package:basecode/widgets/DriverTile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -56,82 +57,53 @@ class _DriversListState extends State<DriversList> {
                 shrinkWrap: true,
                 children: [
                   DriverTile(
-                      () {},
+                      1,
+                      this.navigateToDriverProfile,
                       "Pablo Sandoval",
                       "Brgy. Guadalupe, Cebu City",
                       "10 Wheeler",
                       "ABC-123",
                       "https://picsum.photos/200/300"),
                   DriverTile(
-                      () {},
-                      "Pablo Sandoval",
+                      2,
+                      this.navigateToDriverProfile,
+                      "Keegan Seecat",
                       "Brgy. Guadalupe, Cebu City",
                       "10 Wheeler",
                       "ABC-123",
-                      "https://picsum.photos/200/300"),
+                      "https://picsum.photos/200/301"),
                   DriverTile(
-                      () {},
-                      "Pablo Sandoval",
+                      3,
+                      this.navigateToDriverProfile,
+                      "Blaise Javier",
                       "Brgy. Guadalupe, Cebu City",
                       "10 Wheeler",
                       "ABC-123",
-                      "https://picsum.photos/200/300"),
+                      "https://picsum.photos/200/302"),
                   DriverTile(
-                      () {},
-                      "Pablo Sandoval",
+                      4,
+                      this.navigateToDriverProfile,
+                      "Angelito Roa",
                       "Brgy. Guadalupe, Cebu City",
                       "10 Wheeler",
                       "ABC-123",
-                      "https://picsum.photos/200/300"),
+                      "https://picsum.photos/200/303"),
                   DriverTile(
-                      () {},
-                      "Pablo Sandoval",
+                      5,
+                      this.navigateToDriverProfile,
+                      "Glen Medel",
                       "Brgy. Guadalupe, Cebu City",
                       "10 Wheeler",
                       "ABC-123",
-                      "https://picsum.photos/200/300"),
+                      "https://picsum.photos/200/304"),
                   DriverTile(
-                      () {},
-                      "Pablo Sandoval",
+                      6,
+                      this.navigateToDriverProfile,
+                      "Mitchell Espejo",
                       "Brgy. Guadalupe, Cebu City",
                       "10 Wheeler",
                       "ABC-123",
-                      "https://picsum.photos/200/300"),
-                  DriverTile(
-                      () {},
-                      "Pablo Sandoval",
-                      "Brgy. Guadalupe, Cebu City",
-                      "10 Wheeler",
-                      "ABC-123",
-                      "https://picsum.photos/200/300"),
-                  DriverTile(
-                      () {},
-                      "Pablo Sandoval",
-                      "Brgy. Guadalupe, Cebu City",
-                      "10 Wheeler",
-                      "ABC-123",
-                      "https://picsum.photos/200/300"),
-                  DriverTile(
-                      () {},
-                      "Pablo Sandoval",
-                      "Brgy. Guadalupe, Cebu City",
-                      "10 Wheeler",
-                      "ABC-123",
-                      "https://picsum.photos/200/300"),
-                  DriverTile(
-                      () {},
-                      "Pablo Sandoval",
-                      "Brgy. Guadalupe, Cebu City",
-                      "10 Wheeler",
-                      "ABC-123",
-                      "https://picsum.photos/200/300"),
-                  DriverTile(
-                      () {},
-                      "Pablo Sandoval",
-                      "Brgy. Guadalupe, Cebu City",
-                      "10 Wheeler",
-                      "ABC-123",
-                      "https://picsum.photos/200/300"),
+                      "https://picsum.photos/200/305"),
                 ],
               ),
             ),
@@ -140,5 +112,9 @@ class _DriversListState extends State<DriversList> {
         backgroundColor: Colors.white,
       ),
     );
+  }
+
+  navigateToDriverProfile(int id, String name) {
+    Get.toNamed("${DriverProfile.routeName}?id=$id&name=$name");
   }
 }

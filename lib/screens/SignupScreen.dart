@@ -1,18 +1,17 @@
-import 'package:basecode/screens/DashboardScreen.dart';
+import 'package:basecode/screens/LoginScreen.dart';
 import 'package:basecode/widgets/CustomTextFormField.dart';
 import 'package:basecode/widgets/PasswordField.dart';
 import 'package:basecode/widgets/PrimaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatefulWidget {
-  static String routeName = "/login";
-
+class SignupScreen extends StatefulWidget {
+  static String routeName = "/signup";
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _SignupScreenState createState() => _SignupScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignupScreenState extends State<SignupScreen> {
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -23,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Log In",
+          "Sign Up",
           style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
@@ -36,6 +35,23 @@ class _LoginScreenState extends State<LoginScreen> {
             size: 35.0,
           ),
         ),
+        actions: [
+          GestureDetector(
+            onTap: () {
+              Get.toNamed(LoginScreen.routeName);
+            },
+            child: Center(
+              child: Container(
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                      fontSize: 18.0, color: Theme.of(context).accentColor),
+                ),
+                margin: EdgeInsets.only(right: 15.0),
+              ),
+            ),
+          )
+        ],
         elevation: 0,
       ),
       body: Center(
@@ -45,6 +61,15 @@ class _LoginScreenState extends State<LoginScreen> {
               width: width * .90,
               child: Column(
                 children: [
+                  CustomTextFormField(
+                    labelText: "Name",
+                    hintText: "Enter your name",
+                    controller: nameController,
+                    textInputType: TextInputType.name,
+                  ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
                   CustomTextFormField(
                     labelText: "Email Address",
                     hintText: "Enter your email address",
@@ -65,11 +90,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 50.0,
                   ),
                   PrimaryButton(
-                    text: "Log In",
+                    text: "Sign Up",
                     iconData: null,
                     onPress: () {
-                      //add auth logic here
-                      Get.toNamed(DashboardScreen.routeName);
+                      Get.toNamed(SignupScreen.routeName);
                     },
                     height: 60,
                   ),
