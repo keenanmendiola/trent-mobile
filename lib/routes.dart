@@ -9,6 +9,7 @@ import 'package:basecode/screens/MessagesScreen.dart';
 import 'package:basecode/screens/RegistrationScreen.dart';
 import 'package:basecode/screens/SettingsScreen.dart';
 import 'package:basecode/screens/SignupScreen.dart';
+import 'package:basecode/screens/TransactionHistoryScreen.dart';
 import 'package:get/get.dart';
 
 final List<GetPage<dynamic>> routes = [
@@ -25,4 +26,8 @@ final List<GetPage<dynamic>> routes = [
   GetPage(name: LogoScreen.routeName, page: () => LogoScreen()),
   GetPage(name: LoginScreen.routeName, page: () => LoginScreen()),
   GetPage(name: SignupScreen.routeName, page: () => SignupScreen()),
+  GetPage(
+      name: TransactionHistoryScreen.routeName,
+      page: () => TransactionHistoryScreen()),
+  GetPage(name: SettingsScreen.routeName, page: () => SettingsScreen()),
 ];
