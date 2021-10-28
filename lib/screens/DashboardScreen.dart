@@ -1,4 +1,5 @@
 import 'package:basecode/screens/DriversListScreen.dart';
+import 'package:basecode/screens/ReportsScreen.dart';
 import 'package:basecode/screens/SettingsScreen.dart';
 import 'package:basecode/screens/TransactionHistoryScreen.dart';
 import 'package:basecode/widgets/DashboardCard.dart';
@@ -77,8 +78,9 @@ class DashboardScreenState extends State<DashboardScreen> {
                   DashboardCard(FontAwesomeIcons.male, "Your Drivers", () {
                     navigateToPage(DriversList.routeName);
                   }),
-                  DashboardCard(
-                      FontAwesomeIcons.calendarCheck, "Reports", () {})
+                  DashboardCard(FontAwesomeIcons.calendarCheck, "Reports", () {
+                    navigateToPage(ReportsScreen.routeName);
+                  })
                 ],
               )
             ],

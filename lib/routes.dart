@@ -7,6 +7,7 @@ import 'package:basecode/screens/LoginScreen.dart';
 import 'package:basecode/screens/LogoScreen.dart';
 import 'package:basecode/screens/MessagesScreen.dart';
 import 'package:basecode/screens/RegistrationScreen.dart';
+import 'package:basecode/screens/ReportsScreen.dart';
 import 'package:basecode/screens/SettingsScreen.dart';
 import 'package:basecode/screens/SignupScreen.dart';
 import 'package:basecode/screens/TransactionHistoryScreen.dart';
@@ -30,4 +31,5 @@ final List<GetPage<dynamic>> routes = [
       name: TransactionHistoryScreen.routeName,
       page: () => TransactionHistoryScreen()),
   GetPage(name: SettingsScreen.routeName, page: () => SettingsScreen()),
+  GetPage(name: ReportsScreen.routeName, page: () => ReportsScreen()),
 ];
