@@ -2,7 +2,6 @@ import 'package:basecode/widgets/ReportCard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:fl_chart/fl_chart.dart';
 
 class ReportsScreen extends StatefulWidget {
   static String routeName = "/reports";

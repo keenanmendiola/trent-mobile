@@ -1,6 +1,9 @@
 import 'package:basecode/widgets/Avatar.dart';
+import 'package:basecode/widgets/DriverDetailsCard.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:assorted_layout_widgets/assorted_layout_widgets.dart';
 
 class DriverProfile extends StatefulWidget {
   static String routeName = "/driverprofile";
@@ -13,12 +16,16 @@ class _DriverProfileState extends State<DriverProfile> {
   int id = int.parse(Get.parameters["id"]) ?? 0;
   String name = Get.parameters["name"] ?? "";
 
+  //call backend here to get driver profile details
+
   //replace this url during integration with driver image
   String imageUrl = "https://picsum.photos/200/305";
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
@@ -43,8 +50,34 @@ class _DriverProfileState extends State<DriverProfile> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(height: height * .2),
-                  Avatar(158.0, imageUrl),
+                  ColumnSuper(
+                    children: [
+                      Container(
+                        height: 250,
+                        width: width,
+                        color: Theme.of(context).accentColor,
+                      ),
+                      Avatar(
+                        158.0,
+                        imageUrl,
+                        borderWith: 3.0,
+                      ),
+                    ],
+                    innerDistance: -100.0,
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  DriverDetailsCard(width * .8, FontAwesomeIcons.male, name),
+                  DriverDetailsCard(
+                      width * .8,
+                      FontAwesomeIcons.solidAddressCard,
+                      "Brgy. Guadalupe, Cebu City"),
+                  DriverDetailsCard(
+                      width * .8, FontAwesomeIcons.calendar, "January 1, 2000"),
+                  DriverDetailsCard(width * .8, Icons.male, "Male"),
+                  DriverDetailsCard(
+                      width * .8, FontAwesomeIcons.phone, "091235465897"),
                 ],
               ),
             ),
