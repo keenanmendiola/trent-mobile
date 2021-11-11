@@ -1,3 +1,4 @@
+import 'package:basecode/screens/CurrentBookingsScreen.dart';
 import 'package:basecode/screens/DriversListScreen.dart';
 import 'package:basecode/screens/ReportsScreen.dart';
 import 'package:basecode/screens/SettingsScreen.dart';
@@ -54,8 +55,9 @@ class DashboardScreenState extends State<DashboardScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  DashboardCard(
-                      FontAwesomeIcons.book, "Current Bookings", () {}),
+                  DashboardCard(FontAwesomeIcons.book, "Current Bookings", () {
+                    navigateToPage(CurrentBookings.routeName);
+                  }),
                   DashboardCard(
                       FontAwesomeIcons.calendarDay, "Scheduled Bookings", () {})
                 ],

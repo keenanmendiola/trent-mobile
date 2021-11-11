@@ -1,4 +1,6 @@
+import 'package:basecode/screens/BookingDetailsScreen.dart';
 import 'package:basecode/screens/ConversationScreen.dart';
+import 'package:basecode/screens/CurrentBookingsScreen.dart';
 import 'package:basecode/screens/DashboardScreen.dart';
 import 'package:basecode/screens/DriverProfile.dart';
 import 'package:basecode/screens/DriversListScreen.dart';
@@ -32,4 +34,7 @@ final List<GetPage<dynamic>> routes = [
       page: () => TransactionHistoryScreen()),
   GetPage(name: SettingsScreen.routeName, page: () => SettingsScreen()),
   GetPage(name: ReportsScreen.routeName, page: () => ReportsScreen()),
+  GetPage(name: CurrentBookings.routeName, page: () => CurrentBookings()),
+  GetPage(
+      name: BookingDetailsScreen.routeName, page: () => BookingDetailsScreen())
 ];
