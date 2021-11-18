@@ -7,6 +7,7 @@ import 'package:basecode/screens/DriversListScreen.dart';
 import 'package:basecode/screens/ForgotPasswordScreen.dart';
 import 'package:basecode/screens/LoginScreen.dart';
 import 'package:basecode/screens/LogoScreen.dart';
+import 'package:basecode/screens/MapScreen.dart';
 import 'package:basecode/screens/MessagesScreen.dart';
 import 'package:basecode/screens/RegistrationScreen.dart';
 import 'package:basecode/screens/ReportsScreen.dart';
@@ -36,5 +37,6 @@ final List<GetPage<dynamic>> routes = [
   GetPage(name: ReportsScreen.routeName, page: () => ReportsScreen()),
   GetPage(name: CurrentBookings.routeName, page: () => CurrentBookings()),
   GetPage(
-      name: BookingDetailsScreen.routeName, page: () => BookingDetailsScreen())
+      name: BookingDetailsScreen.routeName, page: () => BookingDetailsScreen()),
+  GetPage(name: MapScreen.routeName, page: () => MapScreen())
 ];
