@@ -31,6 +31,7 @@ dependencies:
   get: ^4.3.8
   flutter_chat_bubble: ^2.0.0
   assorted_layout_widgets: ^5.2.1
+  google_maps_flutter: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +52,7 @@ flutter:
     - assets/images/trent-red.png
     - assets/images/logo.png
     - assets/images/truck.jpg
+    - assets/images/map.PNG
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
