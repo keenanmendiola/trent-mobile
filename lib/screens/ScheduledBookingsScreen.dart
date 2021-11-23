@@ -3,13 +3,14 @@ import 'package:basecode/widgets/BookingsList.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CurrentBookings extends StatefulWidget {
-  static String routeName = "/currentbookings";
+class ScheduledBookingsScreen extends StatefulWidget {
+  static String routeName = "/scheduledbookings";
   @override
-  _CurrentBookingsState createState() => _CurrentBookingsState();
+  _ScheduledBookingsScreenState createState() =>
+      _ScheduledBookingsScreenState();
 }
 
-class _CurrentBookingsState extends State<CurrentBookings> {
+class _ScheduledBookingsScreenState extends State<ScheduledBookingsScreen> {
   final List<Booking> sampleData = [
     Booking(
         1,
@@ -42,7 +43,7 @@ class _CurrentBookingsState extends State<CurrentBookings> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Current Bookings"),
+          title: Text("Scheduled Bookings"),
           elevation: 0,
           automaticallyImplyLeading: false,
           leading: GestureDetector(
@@ -63,10 +64,6 @@ class _CurrentBookingsState extends State<CurrentBookings> {
           color: Colors.white,
           child: ListView(
             children: [
-              BookingsList("Bookings for Today", sampleData, width * .9),
-              SizedBox(
-                height: 20.0,
-              ),
               BookingsList("Incoming Bookings", sampleData, width * .9),
             ],
           ),

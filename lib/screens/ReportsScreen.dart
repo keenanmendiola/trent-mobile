@@ -115,6 +115,14 @@ class _ReportsScreenState extends State<ReportsScreen> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
+                  Image(
+                    image: AssetImage('assets/images/graph.png'),
+                    height: 225,
+                    width: double.maxFinite,
+                  ),
                 ],
               ),
             ),

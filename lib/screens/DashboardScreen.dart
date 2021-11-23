@@ -1,8 +1,10 @@
 import 'package:basecode/screens/CurrentBookingsScreen.dart';
 import 'package:basecode/screens/DriversListScreen.dart';
 import 'package:basecode/screens/ReportsScreen.dart';
+import 'package:basecode/screens/ScheduledBookingsScreen.dart';
 import 'package:basecode/screens/SettingsScreen.dart';
 import 'package:basecode/screens/TransactionHistoryScreen.dart';
+import 'package:basecode/screens/TrucksList.dart';
 import 'package:basecode/widgets/DashboardCard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -59,7 +61,9 @@ class DashboardScreenState extends State<DashboardScreen> {
                     navigateToPage(CurrentBookings.routeName);
                   }),
                   DashboardCard(
-                      FontAwesomeIcons.calendarDay, "Scheduled Bookings", () {})
+                      FontAwesomeIcons.calendarDay, "Scheduled Bookings", () {
+                    navigateToPage(ScheduledBookingsScreen.routeName);
+                  })
                 ],
               ),
               Row(
@@ -70,7 +74,9 @@ class DashboardScreenState extends State<DashboardScreen> {
                       () {
                     navigateToPage(TransactionHistoryScreen.routeName);
                   }),
-                  DashboardCard(FontAwesomeIcons.truck, "Your Trucks", () {})
+                  DashboardCard(FontAwesomeIcons.truck, "Your Trucks", () {
+                    navigateToPage(TrucksList.routeName);
+                  })
                 ],
               ),
               Row(

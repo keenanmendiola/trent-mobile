@@ -11,9 +11,12 @@ import 'package:basecode/screens/MapScreen.dart';
 import 'package:basecode/screens/MessagesScreen.dart';
 import 'package:basecode/screens/RegistrationScreen.dart';
 import 'package:basecode/screens/ReportsScreen.dart';
+import 'package:basecode/screens/ScheduledBookingsScreen.dart';
 import 'package:basecode/screens/SettingsScreen.dart';
 import 'package:basecode/screens/SignupScreen.dart';
+import 'package:basecode/screens/TransactionHistoryDetails.dart';
 import 'package:basecode/screens/TransactionHistoryScreen.dart';
+import 'package:basecode/screens/TrucksList.dart';
 import 'package:get/get.dart';
 
 final List<GetPage<dynamic>> routes = [
@@ -38,5 +41,12 @@ final List<GetPage<dynamic>> routes = [
   GetPage(name: CurrentBookings.routeName, page: () => CurrentBookings()),
   GetPage(
       name: BookingDetailsScreen.routeName, page: () => BookingDetailsScreen()),
-  GetPage(name: MapScreen.routeName, page: () => MapScreen())
+  GetPage(name: MapScreen.routeName, page: () => MapScreen()),
+  GetPage(
+      name: TransactionHistoryDetails.routeName,
+      page: () => TransactionHistoryDetails()),
+  GetPage(
+      name: ScheduledBookingsScreen.routeName,
+      page: () => ScheduledBookingsScreen()),
+  GetPage(name: TrucksList.routeName, page: () => TrucksList()),
 ];

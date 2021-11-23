@@ -33,7 +33,8 @@ class BookingsList extends StatelessWidget {
             itemCount: _bookings.length,
             itemBuilder: (BuildContext context, int index) {
               return BookingTile(_width, _bookings[index], () {
-                navigateToBookingDetails(_bookings[index].bookingId, _bookings[index].dateBooked);
+                navigateToBookingDetails(
+                    _bookings[index].bookingId, _bookings[index].dateBooked);
               });
             }),
       ],
