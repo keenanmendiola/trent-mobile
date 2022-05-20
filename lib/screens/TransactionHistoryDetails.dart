@@ -31,7 +31,7 @@ class _TransactionHistoryDetailsState extends State<TransactionHistoryDetails> {
           },
           child: Icon(
             Icons.chevron_left,
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             size: 40,
           ),
         ),
@@ -102,7 +102,8 @@ class _TransactionHistoryDetailsState extends State<TransactionHistoryDetails> {
                   "Pickup and Drop-off Locations",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(
@@ -167,7 +168,8 @@ class _TransactionHistoryDetailsState extends State<TransactionHistoryDetails> {
                   "Payment Details",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(
@@ -261,7 +263,8 @@ class _TransactionHistoryDetailsState extends State<TransactionHistoryDetails> {
                   "Trucks Used",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(
@@ -328,7 +331,8 @@ class _TransactionHistoryDetailsState extends State<TransactionHistoryDetails> {
                   "Remarks",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(

@@ -21,18 +21,30 @@ class _SignupScreenState extends State<SignupScreen> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "Sign Up",
-          style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+        backgroundColor: Colors.white,
+        title: Container(
+          margin: EdgeInsets.only(top: 20.0),
+          child: Text(
+            "Sign Up",
+            style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+                fontStyle: FontStyle.normal),
+          ),
         ),
         centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             Get.back();
           },
-          child: Icon(
-            Icons.chevron_left,
-            size: 35.0,
+          child: Container(
+            margin: EdgeInsets.only(top: 20.0),
+            child: Icon(
+              Icons.chevron_left,
+              size: 40.0,
+              color: Colors.black,
+            ),
           ),
         ),
         actions: [
@@ -42,12 +54,18 @@ class _SignupScreenState extends State<SignupScreen> {
             },
             child: Center(
               child: Container(
-                child: Text(
-                  "Login",
-                  style: TextStyle(
-                      fontSize: 18.0, color: Theme.of(context).accentColor),
+                margin: EdgeInsets.only(top: 20.0, right: 15.0),
+                child: Material(
+                  elevation: 10.0,
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.red,
+                        fontStyle: FontStyle.normal),
+                  ),
                 ),
-                margin: EdgeInsets.only(right: 15.0),
               ),
             ),
           )
@@ -110,7 +128,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         "Forgot Password?",
                         style: TextStyle(
                             fontSize: 18.0,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             fontWeight: FontWeight.bold),
                       ),
                     )),

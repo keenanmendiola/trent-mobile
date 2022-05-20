@@ -24,7 +24,7 @@ class DriverDetailsCard extends StatelessWidget {
           Icon(
             iconData,
             size: 30,
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           SizedBox(width: 25.0),
           Text(text),

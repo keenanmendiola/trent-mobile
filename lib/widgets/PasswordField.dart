@@ -25,7 +25,7 @@ class PasswordField extends StatelessWidget {
             child: Text(
               obscureText ? "Show" : "Hide",
               style: TextStyle(
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
             ),
           ),

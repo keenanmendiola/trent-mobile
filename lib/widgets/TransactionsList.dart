@@ -20,8 +20,8 @@ class TransactionsList extends StatelessWidget {
         children: [
           Text(
             DateFormatter.getMonthAndYear(_transactions.first.transactionDate),
-            style:
-                TextStyle(fontSize: 17, color: Theme.of(context).accentColor),
+            style: TextStyle(
+                fontSize: 17, color: Theme.of(context).colorScheme.secondary),
           ),
           ListView.builder(
               physics: NeverScrollableScrollPhysics(),

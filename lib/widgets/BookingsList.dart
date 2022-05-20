@@ -22,7 +22,7 @@ class BookingsList extends StatelessWidget {
           child: Text(
             _title,
             style: TextStyle(
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 fontWeight: FontWeight.w600,
                 fontSize: 20),
           ),

@@ -19,7 +19,7 @@ class _MapScreenState extends State<MapScreen> {
             },
             child: Icon(
               Icons.chevron_left,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               size: 40,
             ),
           ),

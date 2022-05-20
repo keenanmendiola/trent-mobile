@@ -42,17 +42,25 @@ class _ScheduledBookingsScreenState extends State<ScheduledBookingsScreen> {
     double width = MediaQuery.of(context).size.width;
     return SafeArea(
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Text("Scheduled Bookings"),
+          title: Text(
+            "Scheduled Bookings",
+            style: TextStyle(
+                color: Colors.black, fontStyle: FontStyle.normal, fontSize: 20),
+          ),
           elevation: 0,
+          leadingWidth: 30,
+          centerTitle: false,
           automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
           leading: GestureDetector(
             onTap: () {
               Get.back();
             },
             child: Icon(
               Icons.chevron_left,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               size: 40,
             ),
           ),

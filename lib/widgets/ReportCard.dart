@@ -27,7 +27,8 @@ class ReportCard extends StatelessWidget {
               children: [
                 Text(
                   primaryText,
-                  style: TextStyle(color: Theme.of(context).accentColor),
+                  style:
+                      TextStyle(color: Theme.of(context).colorScheme.secondary),
                 ),
                 Text(secondaryText,
                     style:

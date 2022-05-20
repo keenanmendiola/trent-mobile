@@ -23,17 +23,23 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: Text(
           bookingDate,
-          style: TextStyle(color: Theme.of(context).accentColor),
+          style: TextStyle(
+              color: Theme.of(context).colorScheme.secondary,
+              fontStyle: FontStyle.normal,
+              fontSize: 22),
         ),
+        leadingWidth: 30,
+        centerTitle: false,
         leading: GestureDetector(
           onTap: () {
             Get.back();
           },
           child: Icon(
             Icons.chevron_left,
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             size: 40,
           ),
         ),
@@ -85,7 +91,8 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   "Pickup and Drop-off Locations",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(
@@ -150,7 +157,8 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   "Payment Details",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(
@@ -244,7 +252,8 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   "Trucks Used",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(
@@ -311,7 +320,8 @@ class _BookingDetailsScreenState extends State<BookingDetailsScreen> {
                   "Remarks",
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                      color: Theme.of(context).accentColor, fontSize: 20.0),
+                      color: Theme.of(context).colorScheme.secondary,
+                      fontSize: 20.0),
                 ),
               ),
               Container(

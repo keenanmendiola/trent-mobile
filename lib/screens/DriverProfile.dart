@@ -39,7 +39,7 @@ class _DriverProfileState extends State<DriverProfile> {
               },
               child: Icon(
                 Icons.chevron_left,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
                 size: 40,
               ),
             ),
@@ -54,7 +54,7 @@ class _DriverProfileState extends State<DriverProfile> {
                       Container(
                         height: 250,
                         width: width,
-                        color: Theme.of(context).accentColor,
+                        color: Theme.of(context).colorScheme.secondary,
                       ),
                       Avatar(
                         158.0,

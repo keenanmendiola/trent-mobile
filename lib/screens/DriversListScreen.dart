@@ -19,15 +19,21 @@ class _DriversListState extends State<DriversList> {
         appBar: AppBar(
           title: Text(
             "Your Drivers",
-            style: TextStyle(fontWeight: FontWeight.w400),
+            style: TextStyle(
+                color: Colors.black, fontStyle: FontStyle.normal, fontSize: 20),
           ),
+          elevation: 0,
+          leadingWidth: 30,
+          centerTitle: false,
+          automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
           leading: GestureDetector(
             onTap: () {
               Get.back();
             },
             child: Icon(
               Icons.chevron_left,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               size: 40,
             ),
           ),
@@ -38,15 +44,12 @@ class _DriversListState extends State<DriversList> {
                 onTap: () {},
                 child: Icon(
                   Icons.search,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   size: 30,
                 ),
               ),
             ),
           ],
-          leadingWidth: 40,
-          centerTitle: false,
-          elevation: 0,
         ),
         body: SingleChildScrollView(
           child: Center(

@@ -27,7 +27,7 @@ class _MessagesScreenState extends State<MessagesScreen> {
             },
             child: Icon(
               Icons.chevron_left,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               size: 40,
             ),
           ),

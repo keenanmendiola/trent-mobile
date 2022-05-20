@@ -12,17 +12,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Settings"),
-        centerTitle: true,
+        title: Text(
+          "Settings",
+          style: TextStyle(
+              color: Colors.black, fontStyle: FontStyle.normal, fontSize: 20),
+        ),
         elevation: 0,
+        leadingWidth: 30,
+        centerTitle: false,
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
         leading: GestureDetector(
           onTap: () {
             Get.back();
           },
           child: Icon(
             Icons.chevron_left,
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             size: 40,
           ),
         ),

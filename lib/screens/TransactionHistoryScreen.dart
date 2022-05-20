@@ -50,16 +50,23 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Transaction History"),
+        title: Text(
+          "Transaction History",
+          style: TextStyle(
+              color: Colors.black, fontStyle: FontStyle.normal, fontSize: 20),
+        ),
         elevation: 0,
+        leadingWidth: 30,
+        centerTitle: false,
         automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
         leading: GestureDetector(
           onTap: () {
             Get.back();
           },
           child: Icon(
             Icons.chevron_left,
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             size: 40,
           ),
         ),
@@ -69,7 +76,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
             child: Icon(
               Icons.search,
               size: 30,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
             ),
           ),
           Padding(
@@ -79,7 +86,7 @@ class _TransactionHistoryScreenState extends State<TransactionHistoryScreen> {
               child: Icon(
                 FontAwesomeIcons.sort,
                 size: 30,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
             ),
           ),

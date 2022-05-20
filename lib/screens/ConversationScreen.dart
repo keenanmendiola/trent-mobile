@@ -32,7 +32,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
             },
             child: Icon(
               Icons.chevron_left,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               size: 40,
             ),
           ),
@@ -41,7 +41,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
               child: Icon(
                 Icons.info,
                 size: 30,
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
               margin: EdgeInsets.symmetric(horizontal: 15),
             )

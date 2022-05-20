@@ -23,6 +23,7 @@ class DashboardScreenState extends State<DashboardScreen> {
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
+          backgroundColor: Color(0xFFFFFF),
           actions: [
             GestureDetector(
               onTap: () {
@@ -33,7 +34,7 @@ class DashboardScreenState extends State<DashboardScreen> {
                 child: Icon(
                   Icons.settings,
                   size: 30,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ),

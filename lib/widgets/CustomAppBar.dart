@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
         onTap: this.onTap,
         child: Icon(
           Icons.chevron_left,
-          color: Theme.of(context).accentColor,
+          color: Theme.of(context).colorScheme.secondary,
           size: 40,
         ),
       ),

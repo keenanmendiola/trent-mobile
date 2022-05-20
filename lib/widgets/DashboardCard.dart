@@ -35,7 +35,7 @@ class DashboardCard extends StatelessWidget {
           children: [
             FaIcon(
               this.icon,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               size: 40.0,
             ),
             SizedBox(
