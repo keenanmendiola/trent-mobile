@@ -24,7 +24,16 @@ class _TransactionHistoryDetailsState extends State<TransactionHistoryDetails> {
       appBar: AppBar(
         title: Text(
           transactionDate,
+          style: TextStyle(
+              color: Theme.of(context).colorScheme.secondary,
+              fontStyle: FontStyle.normal,
+              fontSize: 22),
         ),
+        elevation: 0,
+        leadingWidth: 30,
+        centerTitle: false,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.white,
         leading: GestureDetector(
           onTap: () {
             Get.back();
@@ -35,7 +44,6 @@ class _TransactionHistoryDetailsState extends State<TransactionHistoryDetails> {
             size: 40,
           ),
         ),
-        elevation: 0,
       ),
       body: Container(
         height: double.maxFinite,

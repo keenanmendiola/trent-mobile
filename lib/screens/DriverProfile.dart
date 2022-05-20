@@ -28,10 +28,12 @@ class _DriverProfileState extends State<DriverProfile> {
     return SafeArea(
       child: Scaffold(
           appBar: AppBar(
-            elevation: 0,
             title: Text(
               "Your Driver",
-              style: TextStyle(fontWeight: FontWeight.w400),
+              style: TextStyle(
+                  color: Colors.black,
+                  fontStyle: FontStyle.normal,
+                  fontSize: 20),
             ),
             leading: GestureDetector(
               onTap: () {
@@ -43,6 +45,11 @@ class _DriverProfileState extends State<DriverProfile> {
                 size: 40,
               ),
             ),
+            elevation: 0,
+            leadingWidth: 30,
+            centerTitle: false,
+            automaticallyImplyLeading: false,
+            backgroundColor: Colors.white,
           ),
           body: SingleChildScrollView(
             child: Center(
